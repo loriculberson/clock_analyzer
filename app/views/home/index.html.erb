@@ -1,18 +1,21 @@
 <div>
-  
   <h2>What's the Angle?</h2>
 
   <div>
-  <label>Enter time:</label>
-    <input type="text" name="time" placeholder="12:15">
+    <%= form_with local: true, method: :get do |f| %>
+      <%= f.label "Enter time:" %>
+      <%= f.text_field(:time, placeholder: "12:15") %>
+      <%= f.submit "Submit"%>
+    <% end %>
   </div>
 
-  <button>Submit</button>
-
-  <div>
-    <h3>Angle difference between the hour and minute hand is:</h3>
-
-    <p>answer </p>
-  </div>
+  <% if @angle.present?  %>
+    <div>
+      <h4>Angle difference between the hour and minute hand is:</h4>
+        The time of <%= @time %> has an angle of <%= @angle %> degrees
+    </div>
+    <%= link_to 'Clear', '/' %>
+  <% end %>
 </div>
+
 
