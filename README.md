@@ -12,6 +12,7 @@
 1. In the terminal: `rspec spec/model/clock_analyzer_spec.rb` 
 
 Rails 5.1.3
+
 Ruby 2.4.1
 
 
