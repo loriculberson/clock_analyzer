@@ -39,7 +39,11 @@ class ClockAnalyzer
   end
 
   def hours
-    time_parser[1].to_i
+    if time_parser[1].to_i > 12
+      time_parser[1].to_i - 12
+    else
+      time_parser[1].to_i
+    end
   end
 
   def minutes
