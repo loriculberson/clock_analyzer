@@ -62,5 +62,14 @@ RSpec.describe ClockAnalyzer do
         expect(clock_analyzer.compute_difference).to eq(40)
       end
     end
+
+    context "time entered is military time" do 
+      it "returns 105 angle difference between minute and hour hand" do 
+        time = "2:30"
+        clock_analyzer = ClockAnalyzer.new(time)
+
+        expect(clock_analyzer.compute_difference).to eq(105)
+      end
+    end
   end
 end

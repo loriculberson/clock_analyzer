@@ -4,8 +4,11 @@
   <div>
     <%= form_with local: true, method: :get do |f| %>
       <%= f.label "Enter time:" %>
-      <%= f.text_field(:time, placeholder: "12:15") %>
-      <%= f.submit "Submit"%>
+      <%= f.text_field(:time, placeholder: "HH:mm", 
+                       id: "timeField",
+                       class: 'time'
+                      ) %>
+      <%= f.submit "Submit", class: 'submit', disabled: true%>
     <% end %>
   </div>
 
@@ -17,5 +20,3 @@
     <%= link_to 'Clear', '/' %>
   <% end %>
 </div>
-
-
