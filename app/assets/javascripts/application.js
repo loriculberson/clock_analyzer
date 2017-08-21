@@ -14,3 +14,4 @@
 //= require_tree .
 
 timeValidator();
+setupSubmitButtonToMoveClock();

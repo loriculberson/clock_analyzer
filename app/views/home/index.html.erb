@@ -10,13 +10,15 @@
                       ) %>
       <%= f.submit "Submit", class: 'submit', disabled: true%>
     <% end %>
-  </div>
-
   <% if @angle.present?  %>
     <div>
       <h4>Angle difference between the hour and minute hand is:</h4>
         The time of <%= @time %> has an angle of <%= @angle %> degrees
     </div>
     <%= link_to 'Clear', '/' %>
+
   <% end %>
+  </div>
+
 </div>
+<%= render partial: "partials/clock" %>
