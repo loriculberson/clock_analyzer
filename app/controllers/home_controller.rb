@@ -14,6 +14,8 @@ class HomeController < ApplicationController
             angle: angle
           }
           render json: results
+        else
+          head :no_content
         end
       end
     end

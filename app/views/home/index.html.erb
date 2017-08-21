@@ -4,20 +4,17 @@
   <div>
     <%= form_with local: true, method: :get do |f| %>
       <%= f.label "Enter time:" %>
-      <%= f.text_field(:time, placeholder: "HH:mm", 
+      <%= f.text_field(:poop, placeholder: "HH:mm", 
                        id: "timeField",
                        class: 'time'
                       ) %>
       <%= f.submit "Submit", class: 'submit', disabled: true%>
     <% end %>
-  <% if @angle.present?  %>
-    <div>
-      <h4>Angle difference between the hour and minute hand is:</h4>
-        The time of <%= @time %> has an angle of <%= @angle %> degrees
+   
+    <div class="results">
     </div>
     <%= link_to 'Clear', '/' %>
 
-  <% end %>
   </div>
 
 </div>
