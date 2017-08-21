@@ -41,8 +41,10 @@ function addAngleTextToPage (time){
 function reset (){
   var resultsDiv = document.querySelector('.results');
   var timeField = document.querySelector('#timeField');
+  var submitButton = document.querySelector('.submit');
   timeField.value = '';
   resultsDiv.innerHTML = ''; 
+  submitButton.disabled = true;
 }
 
 function setupSubmitButtonToMoveClock() {
