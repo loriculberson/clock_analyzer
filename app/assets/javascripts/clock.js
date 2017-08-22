@@ -25,6 +25,7 @@ function addAngleTextToPage (time){
 
     success: function(result){
       var resultsDiv = document.querySelector('.results');
+      resultsDiv.innerHTML = ''; 
       var h4 = document.createElement("h4");
       var p = document.createElement("p");
       var h4Text = "Angle difference between the hour and minute hand is:"
@@ -43,8 +44,8 @@ function reset (){
   var timeField = document.querySelector('#timeField');
   var submitButton = document.querySelector('.submit');
   timeField.value = '';
-  resultsDiv.innerHTML = ''; 
   submitButton.disabled = true;
+  timeField.classList.remove('valid-time');
 }
 
 function setupSubmitButtonToMoveClock() {
