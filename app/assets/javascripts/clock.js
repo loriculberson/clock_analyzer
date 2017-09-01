@@ -26,14 +26,10 @@ function addAngleTextToPage (time){
     success: function(result){
       var resultsDiv = document.querySelector('.results');
       resultsDiv.innerHTML = ''; 
-      var h4 = document.createElement("h4");
       var p = document.createElement("p");
-      var h4Text = "Angle difference between the hour and minute hand is:"
       var pText = "The time of " + result.time + " has an angle of " + result.angle + " degrees"
 
-      resultsDiv.appendChild(h4);
       resultsDiv.appendChild(p);
-      h4.textContent = h4Text;
       p.textContent = pText;
     }
   });
@@ -45,6 +41,7 @@ function reset (){
   var submitButton = document.querySelector('.submit');
   timeField.value = '';
   submitButton.disabled = true;
+  submitButton.style.backgroundColor = "";
   timeField.classList.remove('valid-time');
 }
 

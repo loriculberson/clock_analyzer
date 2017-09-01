@@ -1,3 +1,31 @@
+ input.time {
+  width: 300px;
+  font-size: 20px;
+  text-align: center;
+}
+
+input.time, .submit, .clear-button{
+  height: 30px;
+  border-radius: 5px;
+  font-family: 'Comfortaa', cursive;
+  vertical-align: middle; 
+  display: inline-block;
+}
+
+.submit, .clear-button{
+  color: white;
+  border: none;
+  font-size: 11px;
+  padding: 2px 6px 3px 6px;
+  line-height: 30px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.clear-button {
+  background-color: blue;
+}
+
  input:focus {
   outline:none;
 }
@@ -10,3 +38,24 @@
   border: 1px solid red;
 }
 
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+} 
+
+.form {
+  flex: 1;
+  
+}
+
+.results {
+  padding-right: 20px;
+ h4, p {
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.5em;
+    line-height: 1.7em;
+  }
+}

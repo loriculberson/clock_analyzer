@@ -1,21 +1,5 @@
-<div>
-  <h2>What's the Angle?</h2>
-
-  <div>
-    <%= form_with local: true, method: :get do |f| %>
-      <%= f.label "Enter time:" %>
-      <%= f.text_field(:poop, placeholder: "HH:mm", 
-                       id: "timeField",
-                       class: 'time'
-                      ) %>
-      <%= f.submit "Submit", class: 'submit', disabled: true%>
-    <% end %>
-   
-    <div class="results">
-    </div>
-    <%= link_to 'Clear', '/' %>
-
-  </div>
-
+<%= render partial: "partials/header" %>
+<div class="container">
+  <%= render partial: "partials/time_field" %>
+  <%= render partial: "partials/clock" %>
 </div>
-<%= render partial: "partials/clock" %>

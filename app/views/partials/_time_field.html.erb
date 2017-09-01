@@ -1,0 +1,17 @@
+<div class="form">
+  <%= form_with local: true, method: :get do |f| %>
+    <div class="time-submit">
+    <%= f.text_field(:poop, placeholder: "ti:me", 
+                       id: "timeField",
+                       class: 'time'
+                      ) %>
+                    <%= f.submit "Submit", class: 'submit', disabled: true%>
+  <%=link_to 'Clear', '/', class: 'clear-button'%> 
+    </div>
+  <% end %>
+  <div class="results">
+    <p>Enter a time in HH:mm format to find the interior angle of the hour and minute
+      hands. Times may be entered in either civil or miltary time
+      format.</p>
+  </div>
+</div>
