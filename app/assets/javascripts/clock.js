@@ -10,12 +10,12 @@ function parseTime() {
 }
 
 function moveClock (hours, minutes){
-  var minutes = parseInt(minutes) * 6;
-  var hours = ((parseInt(hours)% 12) / 12) * 360 + 90 + minutes / 12;
-  hourSelector = document.querySelector('#hour');
-  minuteSelector = document.querySelector('#minute');
-  hourSelector.style.transform = "rotate(" + hours + "deg)";
-  minuteSelector.style.transform = "rotate(" + minutes + "deg)";
+  const minutesInDegrees = parseInt(minutes) * 6;
+  const hoursInDegrees = ((parseInt(hours)% 12) / 12) * 360 + 90 + minutes / 12;
+  const hourSelector = document.querySelector('#hour');
+  const minuteSelector = document.querySelector('#minute');
+  hourSelector.style.transform = "rotate(" + hoursInDegrees + "deg)";
+  minuteSelector.style.transform = "rotate(" + minutesInDegrees + "deg)";
 }
 
 function addAngleTextToPage (time){
@@ -27,10 +27,12 @@ function addAngleTextToPage (time){
       var resultsDiv = document.querySelector('.results');
       resultsDiv.innerHTML = ''; 
       var p = document.createElement("p");
-      var pText = "The time of " + result.time + " has an angle of " + result.angle + " degrees"
+      var redTime = ' <span class="red-text">' + result.time + '</span>';
+      var redAngle = ' <span class="red-text">' + result.angle + '</span>';
+      var pText = 'The time of ' + redTime + ' has an interior angle of ' + redAngle + '&deg';
 
       resultsDiv.appendChild(p);
-      p.textContent = pText;
+      p.innerHTML = pText;
     }
   });
 }
