@@ -11,9 +11,14 @@
 #### To run the tests:
 1. In the terminal: `rspec spec/model/clock_analyzer_spec.rb` 
 
-Rails 5.1.3
+* Rails 5.1.3
+* Ruby 2.4.1
 
-Ruby 2.4.1
+---
+![](https://github.com/loriculberson/clock_analyzer/raw/master/app/assets/images/clock_app_demo.png)
+---
+![](https://github.com/loriculberson/clock_analyzer/raw/master/app/assets/images/clock_app_demo2.png)
+
 
 
 

@@ -29,7 +29,7 @@ function addAngleTextToPage (time){
       var p = document.createElement("p");
       var redTime = ' <span class="red-text">' + result.time + '</span>';
       var redAngle = ' <span class="red-text">' + result.angle + '</span>';
-      var pText = 'The time of ' + redTime + ' has an interior angle of ' + redAngle + '&deg';
+      var pText = 'The time of ' + redTime + ' has a central angle of ' + redAngle + '&deg';
 
       resultsDiv.appendChild(p);
       p.innerHTML = pText;
